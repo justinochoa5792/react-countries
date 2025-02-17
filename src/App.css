@@ -203,7 +203,7 @@
   align-items: center;
   justify-content: center;
   padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-right: 1rem;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   font-size: 1.125rem; /* text-lg */
@@ -211,6 +211,12 @@
   background-color: #5a67d8; /* bg-indigo-600 */
   border-radius: 0.375rem; /* rounded-md */
   transition: background-color 0.3s;
+}
+
+.button-primary svg {
+  height: 20px;
+  width: 20px;
+  margin-left: 10px;
 }
 
 .button-primary:hover {
@@ -344,4 +350,94 @@
   color: #718096; /* text-gray-600 */
   font-size: 0.875rem; /* text-sm */
   margin-top: 0.25rem; /* mt-1 */
+}
+
+.single-country-container {
+  padding: 1.5rem; /* p-6 */
+  display: grid;
+  grid-template-columns: 1fr; /* grid-cols-1 */
+  gap: 2rem; /* gap-8 */
+}
+
+@media (min-width: 768px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr); /* md:grid-cols-2 */
+  }
+}
+
+.text-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* gap-4 */
+}
+
+.country-title {
+  font-size: 1.875rem; /* text-3xl */
+  font-weight: 700; /* font-bold */
+  color: #1a202c; /* text-gray-900 */
+}
+
+.country-info {
+  color: #4a5568; /* text-gray-700 */
+  margin-top: 0.5rem;
+}
+
+.country-info p {
+  margin-bottom: 0.5rem; /* space-y-2 */
+}
+
+.country-info span {
+  font-weight: 600; /* font-semibold */
+}
+
+.flag-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flag-image {
+  width: 14rem; /* w-56 */
+  height: auto; /* h-auto */
+  border: 1px solid #e2e8f0; /* border */
+  border-radius: 0.375rem; /* rounded */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* shadow-lg */
+}
+
+.section {
+  padding-top: 4rem; /* py-16 */
+  padding-bottom: 4rem;
+  background-color: #ffffff; /* bg-white */
+}
+
+.section .container {
+  max-width: 64rem; /* max-w-4xl */
+  margin-left: auto; /* mx-auto */
+  margin-right: auto;
+  padding-left: 1rem; /* px-4 */
+  padding-right: 1rem;
+}
+
+.title {
+  font-size: 2.25rem; /* text-4xl */
+  font-weight: 800; /* font-extrabold */
+  color: #1a202c; /* text-gray-900 */
+  margin-bottom: 1.5rem; /* mb-6 */
+  text-align: center; /* text-center */
+}
+
+.paragraph {
+  font-size: 1.25rem; /* text-xl */
+  color: #4a5568; /* text-gray-700 */
+  line-height: 1.75; /* leading-relaxed */
+  margin-bottom: 1rem; /* mb-4 */
+}
+
+.paragraph-lg {
+  font-size: 1.125rem; /* text-lg */
+}
+
+.highlight {
+  font-weight: 600; /* font-semibold */
+  color: #5a67d8; /* text-indigo-600 */
 }

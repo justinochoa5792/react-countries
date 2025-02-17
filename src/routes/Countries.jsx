@@ -51,23 +51,27 @@ const Countries = () => {
           <option value="oceania">Oceania</option>
         </select>
       </div>
-      <ul className="country-list">
-        {filteredData.map((country, i) => {
-          return (
-            <li className="country-item" key={i}>
-              <Link
-                className="country-link"
-                to={`/countries/${country.name.common}`}
-              >
-                {country.name.common}
-              </Link>
-              <div className="country-info">
-                Region: {country.region} | Population: {country.population}
-              </div>
-            </li>
-          );
-        })}
-      </ul>
+      {filteredData.length === 0 ? (
+        <div>No countries match your filters</div>
+      ) : (
+        <ul className="country-list">
+          {filteredData.map((country, i) => {
+            return (
+              <li className="country-item" key={i}>
+                <Link
+                  className="country-link"
+                  to={`/countries/${country.name.common}`}
+                >
+                  {country.name.common}
+                </Link>
+                <div className="country-info">
+                  Region: {country.region} | Population: {country.population}
+                </div>
+              </li>
+            );
+          })}
+        </ul>
+      )}
     </div>
   );
 };
